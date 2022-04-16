@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ingredient_recipe', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('ingredient_id');
+            $table->unsignedBigInteger('recipe_id');
+
+            $table->unsignedBigInteger('ingredient_id');
+            $table->foreign('ingredient_id')->references('id')->on('ingredients');
+
+
+            $table->unsignedBigInteger('recipe_id');
+            $table->foreign('recipe_id')->references('id')->on('recipes');
         });
     }
 

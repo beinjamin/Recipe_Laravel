@@ -17,7 +17,7 @@ class RecipeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->fake->words(rand(4, 12))
         ];
     }
 }

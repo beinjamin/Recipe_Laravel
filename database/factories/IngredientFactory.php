@@ -17,7 +17,7 @@ class IngredientFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->fake->words(rand(1, 4), true)
         ];
     }
 }

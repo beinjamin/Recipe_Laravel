@@ -20,19 +20,10 @@ class DatabaseSeeder extends Seeder
             Recipe::factory(3)->hasAttached(
                 Ingredient::factory(5),
                 [
-                    ''
+                    'amount' => 10,
+                    'unit' => 'cl'
                 ]
             )
-        )
-
-
-
-
-
-
-
-
-
-            ->create();
+        )->create();
     }
 }
